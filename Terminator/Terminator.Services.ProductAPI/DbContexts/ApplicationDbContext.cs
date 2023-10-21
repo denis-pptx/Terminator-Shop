@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Terminator.Services.ProductAPI.Models;
 
 namespace Terminator.Services.ProductAPI.DbContexts;
 
@@ -8,4 +9,7 @@ public class ApplicationDbContext : DbContext
     {
         
     }
+
+    public DbSet<Category> Categories { get; set; }
+    public DbSet<Product> Products { get; set; }
 }
